@@ -1,26 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap');
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-primary: #001d31;
+  --color-primary-container: #0d324d;
+  --color-on-primary: #ffffff;
+  --color-on-primary-container: #7b9bba;
+  --color-primary-fixed: #cee5ff;
+  --color-primary-fixed-dim: #a9caec;
+  --color-on-primary-fixed: #001d32;
+
+  --color-secondary: #b02f00;
+  --color-secondary-container: #ff5722;
+  --color-on-secondary: #ffffff;
+  --color-on-secondary-container: #541100;
+  --color-secondary-fixed: #ffdbd1;
+  --color-secondary-fixed-dim: #ffb5a0;
+  --color-on-secondary-fixed: #3b0900;
+
+  --color-tertiary: #291700;
+  --color-tertiary-container: #452a00;
+  --color-on-tertiary: #ffffff;
+  --color-on-tertiary-container: #d08800;
+  --color-tertiary-fixed: #ffddb5;
+  --color-tertiary-fixed-dim: #ffb957;
+
+  --color-surface: #f5faff;
+  --color-surface-dim: #c8dded;
+  --color-surface-bright: #f5faff;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #eaf5ff;
+  --color-surface-container: #def0ff;
+  --color-surface-container-high: #d6ebfb;
+  --color-surface-container-highest: #d0e5f6;
+
+  --color-on-surface: #081e29;
+  --color-on-surface-variant: #42474d;
+  --color-inverse-surface: #1f333f;
+  --color-inverse-on-surface: #e4f3ff;
+
+  --color-outline: #73777e;
+  --color-outline-variant: #c3c7ce;
+
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* Material Symbols Outlined font-variation-settings */
+.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+.material-symbols-filled {
+  font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24 !important;
+}
+
+/* Wet Coat Sheen Overlay */
+.wet-coat-sheen, .swatch-sheen {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.45) 0%, rgba(255, 255, 255, 0) 60%);
+}
+
+/* Saffron Glow */
+.saffron-glow, .ambient-glow-saffron {
+  box-shadow: 0 8px 24px rgba(255, 87, 34, 0.28);
+}
+
+/* Cards Elevation */
+.card-depth-1, .level-1-card {
+  box-shadow: 0 4px 20px -2px rgba(13, 50, 77, 0.06);
+}
+
+.card-depth-2, .level-2-card {
+  box-shadow: 0 12px 32px -4px rgba(13, 50, 77, 0.10);
+}
+
+/* Hover Lift Effect */
+.hover-lift {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease;
+}
+.hover-lift:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 38px -6px rgba(13, 50, 77, 0.14), 0 6px 14px -2px rgba(255, 87, 34, 0.08);
+}
+
+/* Continuous Infinite Marquee */
+@keyframes awardsMarquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: awardsMarquee 38s linear infinite;
+}
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Swatch Interactive Dots */
+.swatch-dot {
+  transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.2s ease;
+  cursor: pointer;
+}
+.swatch-dot:hover {
+  transform: scale(1.35);
+  box-shadow: 0 0 0 3px #ffffff, 0 0 0 5px rgba(255, 87, 34, 0.6);
+  z-index: 10;
+}
+
+/* Hide scrollbar for brand swipe on mobile */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Smooth Input Focus */
+.input-interactive {
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+.input-interactive:focus {
+  border-color: #ff5722;
+  box-shadow: 0 0 0 4px rgba(255, 87, 34, 0.16);
+  background-color: #ffffff;
 }
