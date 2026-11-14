@@ -30,7 +30,7 @@ Run the development server:
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser.
+Open [http://localhost:3050](http://localhost:3050) with your browser.
 
 ## Production Build
 ```bash
