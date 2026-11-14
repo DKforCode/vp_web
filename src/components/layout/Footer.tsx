@@ -86,9 +86,9 @@ export function Footer() {
               <li>Main Road, Near Landmark, Mumbai</li>
               <li className="pt-1 text-white font-semibold">Mon–Sat: 9 AM – 8:30 PM</li>
               <li className="pt-2">
-                <a href="tel:+919876543210" className="text-secondary-fixed hover:underline flex items-center gap-1.5">
+                <a href="tel:+919235554652" className="text-secondary-fixed hover:underline flex items-center gap-1.5">
                   <span className="material-symbols-outlined text-[16px]">call</span>
-                  +91 98765 43210
+                  +91 92355 54652
                 </a>
               </li>
             </ul>

@@ -8,7 +8,7 @@ export function StickyMobileBar() {
     >
       <div className="max-w-md mx-auto flex items-center gap-3">
         <a
-          href="tel:+919876543210"
+          href="tel:+919235554652"
           className="flex-1 py-3 px-3 rounded-xl bg-primary-container text-white font-bold text-xs sm:text-sm flex items-center justify-center gap-2 active:scale-95 transition-transform shadow-sm"
         >
           <span className="material-symbols-outlined text-[18px]">call</span>

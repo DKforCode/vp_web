@@ -85,7 +85,7 @@ export function ContactSection() {
                     required
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                    placeholder="+91 98765 43210"
+                    placeholder="+91 92355 54652"
                     className="w-full px-4 py-3 rounded-xl border border-outline-variant/60 bg-surface text-primary text-sm focus:outline-none focus:border-secondary-container focus:ring-3 focus:ring-secondary-container/20 input-interactive"
                   />
                 </div>
@@ -166,14 +166,14 @@ export function ContactSection() {
             <span className="text-on-surface-variant font-medium">Or reach us directly right now:</span>
             <div className="flex items-center gap-3">
               <a
-                href="tel:+919876543210"
+                href="tel:+919235554652"
                 className="py-2 px-3.5 rounded-lg bg-surface-container text-primary font-bold hover:bg-surface-container-high transition-colors flex items-center gap-1.5"
               >
                 <span className="material-symbols-outlined text-[16px]">call</span>
-                +91 98765 43210
+                +91 92355 54652
               </a>
               <a
-                href="https://wa.me/919876543210"
+                href="https://wa.me/919235554652"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="py-2 px-3.5 rounded-lg bg-[#25D366]/15 text-[#128C7E] font-bold hover:bg-[#25D366]/25 transition-colors flex items-center gap-1.5"

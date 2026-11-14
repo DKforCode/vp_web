@@ -51,11 +51,11 @@ export function Header() {
         {/* Desktop Trailing CTA (Hidden on Mobile) */}
         <div className="hidden lg:flex items-center gap-4">
           <a
-            href="tel:+919876543210"
+            href="tel:+919235554652"
             className="flex items-center gap-1.5 text-xs font-bold text-primary hover:text-secondary-container px-3 py-2 rounded-lg hover:bg-surface-container transition-colors"
           >
             <span className="material-symbols-outlined text-[18px]">call</span>
-            +91 98765 43210
+            +91 92355 54652
           </a>
           <a
             href="#contact"
@@ -69,7 +69,7 @@ export function Header() {
         {/* Mobile Quick Actions & Hamburger (Visible on Mobile) */}
         <div className="flex lg:hidden items-center gap-2">
           <a
-            href="tel:+919876543210"
+            href="tel:+919235554652"
             className="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center text-primary active:scale-95 transition-transform"
             aria-label="Call Store"
           >
