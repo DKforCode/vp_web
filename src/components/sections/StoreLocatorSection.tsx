@@ -70,7 +70,7 @@ export function StoreLocatorSection() {
           {/* One-Tap Action Buttons (Directions, Call, WhatsApp) */}
           <div className="flex flex-wrap items-center gap-3 w-full sm:w-auto">
             <a
-              href="https://maps.google.com"
+              href="https://www.google.com/maps/dir//''/data=!4m7!4m6!1m1!4e2!1m2!1m1!1s0x399d7f20ba34919d:0xe9920cfb075ac80a!3e0?g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAMYASAF"
               target="_blank"
               rel="noopener noreferrer"
               className="flex-1 sm:flex-none py-3 px-5 rounded-xl bg-primary text-white text-xs sm:text-sm font-bold flex items-center justify-center gap-2 hover:bg-primary-container active:scale-95 transition-all shadow-sm"
@@ -79,14 +79,14 @@ export function StoreLocatorSection() {
               Get Directions
             </a>
             <a
-              href="tel:+919876543210"
+              href="tel:+919235554652"
               className="flex-1 sm:flex-none py-3 px-5 rounded-xl bg-surface-container text-primary border border-outline-variant/40 text-xs sm:text-sm font-bold flex items-center justify-center gap-2 hover:bg-surface-container-high active:scale-95 transition-all"
             >
               <span className="material-symbols-outlined text-[18px]">call</span>
               Call Studio
             </a>
             <a
-              href={`https://wa.me/919876543210?text=Hi%20Vinayak%20Paints,%20I%20would%20like%20to%20inquire%20about%20paint%20shades`}
+              href={`https://wa.me/919235554652?text=Hi%20Vinayak%20Paints,%20I%20would%20like%20to%20inquire%20about%20paint%20shades`}
               target="_blank"
               rel="noopener noreferrer"
               className="w-full sm:w-auto py-3 px-5 rounded-xl bg-[#25D366] text-white text-xs sm:text-sm font-bold flex items-center justify-center gap-2 hover:brightness-105 active:scale-95 transition-all shadow-sm"
@@ -97,30 +97,20 @@ export function StoreLocatorSection() {
           </div>
         </div>
 
-        {/* Right Column: Visual Map Container with Marker Pin */}
+        {/* Right Column: Embedded Google Map */}
         <div className="lg:col-span-6 relative">
           <div className="relative rounded-2xl lg:rounded-3xl overflow-hidden border border-outline-variant/30 shadow-xl bg-surface-container-lowest h-[320px] sm:h-[400px] lg:h-[480px]">
-            <img
-              src={STORE_DATA.mapImage}
-              alt="Vinayak Paints Map Location"
-              className="w-full h-full object-cover"
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6301.667919544211!2d79.45252321377984!3d25.986583658346206!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399d7f20ba34919d%3A0xe9920cfb075ac80a!2sVinayak%20Paints!5e0!3m2!1sen!2sin!4v1794686422584!5m2!1sen!2sin"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="strict-origin-when-cross-origin"
+              title="Vinayak Paints Map Location"
+              className="w-full h-full"
             />
-            {/* Interactive Pin Card Overlay */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 p-3 sm:p-4 rounded-xl sm:rounded-2xl bg-surface-container-lowest/95 backdrop-blur-md border border-white/80 shadow-2xl flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-secondary-container text-white flex items-center justify-center shadow-md animate-bounce">
-                <span className="material-symbols-outlined material-symbols-filled text-[22px]">
-                  storefront
-                </span>
-              </div>
-              <div>
-                <span className="font-extrabold text-xs sm:text-sm text-primary block">
-                  Vinayak Paints Studio
-                </span>
-                <span className="text-[10px] sm:text-xs text-secondary font-bold uppercase tracking-wider block">
-                  Open Today • 9 AM - 8:30 PM
-                </span>
-              </div>
-            </div>
           </div>
         </div>
       </div>
